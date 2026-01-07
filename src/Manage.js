@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 function Manage() {
-  const [activeTab, setActiveTab] = useState('health-check');
+  const [activeTab, setActiveTab] = useState('devops');
   const [infrastructureTab, setInfrastructureTab] = useState('development');
   const [data, setData] = useState({
     healthCheck: null,
@@ -491,26 +491,49 @@ function Manage() {
               </div>
               {data.infrastructure ? (
                 <div>
-                  <div style={{ borderBottom: '1px solid #374151', marginBottom: '20px' }}>
-                    {data.infrastructure.environments && Object.keys(data.infrastructure.environments).map(env => (
-                      <button
-                        key={env}
-                        onClick={() => setInfrastructureTab(env)}
-                        style={{
-                          padding: '8px 16px',
-                          border: 'none',
-                          backgroundColor: infrastructureTab === env ? '#10b981' : 'transparent',
-                          color: infrastructureTab === env ? '#ffffff' : '#9ca3af',
-                          cursor: 'pointer',
-                          marginRight: '10px',
-                          borderRadius: '4px 4px 0 0',
-                          textTransform: 'capitalize'
-                        }}
-                      >
-                        {env}
-                      </button>
-                    ))}
-                  </div>
+                  {data.infrastructure.environments && Object.keys(data.infrastructure.environments).length > 1 ? (
+                    <div style={{ borderBottom: '1px solid #374151', marginBottom: '20px' }}>
+                      {Object.keys(data.infrastructure.environments).map(env => (
+                        <button
+                          key={env}
+                          onClick={() => setInfrastructureTab(env)}
+                          style={{
+                            padding: '8px 16px',
+                            border: 'none',
+                            backgroundColor: infrastructureTab === env ? '#10b981' : 'transparent',
+                            color: infrastructureTab === env ? '#ffffff' : '#9ca3af',
+                            cursor: 'pointer',
+                            marginRight: '10px',
+                            borderRadius: '4px 4px 0 0',
+                            textTransform: 'capitalize'
+                          }}
+                        >
+                          {env}
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <div style={{ borderBottom: '1px solid #374151', marginBottom: '20px' }}>
+                      {Object.keys(data.infrastructure.environments).map(env => (
+                        <button
+                          key={env}
+                          onClick={() => setInfrastructureTab(env)}
+                          style={{
+                            padding: '8px 16px',
+                            border: 'none',
+                            backgroundColor: infrastructureTab === env ? '#10b981' : 'transparent',
+                            color: infrastructureTab === env ? '#ffffff' : '#9ca3af',
+                            cursor: 'pointer',
+                            marginRight: '10px',
+                            borderRadius: '4px 4px 0 0',
+                            textTransform: 'capitalize'
+                          }}
+                        >
+                          {env}
+                        </button>
+                      ))}
+                    </div>
+                  )}
                   {data.infrastructure.environments && data.infrastructure.environments[infrastructureTab] ? (
                     renderComponentTiles(data.infrastructure.environments[infrastructureTab].components || {})
                   ) : (

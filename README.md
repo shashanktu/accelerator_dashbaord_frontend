@@ -5,6 +5,7 @@ A React frontend with Python FastAPI backend for managing bots and accelerators.
 ## Quick Start
 
 ### Option 1: Run Both Frontend and Backend Together
+
 ```bash
 npm install
 npm run backend:install
@@ -14,12 +15,14 @@ npm run dev
 ### Option 2: Run Separately
 
 #### Frontend (React)
+
 ```bash
 npm install
 npm start
 ```
 
 #### Backend (Python)
+
 ```bash
 cd py-backend
 pip install -r requirements.txt
@@ -29,8 +32,8 @@ python main.py
 ## URLs
 
 - Frontend: http://localhost:3000
-- Backend API: http://127.0.0.1:8000
-- API Documentation: http://127.0.0.1:8000/docs
+- Backend API: https://accelerator-management-backend.vercel.app
+- API Documentation: https://accelerator-management-backend.vercel.app/docs
 
 ## Project Structure
 

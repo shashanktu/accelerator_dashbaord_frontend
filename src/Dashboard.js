@@ -12,7 +12,7 @@ function Dashboard() {
 
   const fetchApplications = async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://127.0.0.1:8000'}/applications`);
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'https://accelerator-management-backend.vercel.app'}/applications`);
       if (response.ok) {
         const data = await response.json();
         setApplications(data);

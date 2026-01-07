@@ -24,7 +24,7 @@ function Manage() {
   const runHealthCheck = async () => {
     setIsRunning(true);
     try {
-      const backendUrl = `${process.env.REACT_APP_BACKEND_URL || 'http://127.0.0.1:8000'}/devops/${currentBot}`;
+      const backendUrl = `${process.env.REACT_APP_BACKEND_URL || 'https://accelerator-management-backend.vercel.app'}/devops/${currentBot}`;
       console.log(`Running health check: ${backendUrl}`);
       
       const response = await fetch(backendUrl);
@@ -329,7 +329,7 @@ function Manage() {
   const fetchAzureData = async (type) => {
     setLoading(true);
     try {
-      const backendUrl = `${process.env.REACT_APP_BACKEND_URL || 'http://127.0.0.1:8000'}/${type}/${currentBot}`;
+      const backendUrl = `${process.env.REACT_APP_BACKEND_URL || 'https://accelerator-management-backend.vercel.app'}/${type}/${currentBot}`;
       console.log(`Fetching: ${backendUrl}`);
       
       const response = await fetch(backendUrl);

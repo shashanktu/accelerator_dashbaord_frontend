@@ -368,20 +368,6 @@ function Manage() {
       <div style={{ marginTop: '30px' }}>
         <div style={{ borderBottom: '1px solid #374151' }}>
           <button
-            onClick={() => setActiveTab('health-check')}
-            style={{
-              padding: '10px 20px',
-              border: 'none',
-              backgroundColor: activeTab === 'health-check' ? '#10b981' : 'transparent',
-              color: activeTab === 'health-check' ? '#ffffff' : '#9ca3af',
-              cursor: 'pointer',
-              marginRight: '10px',
-              borderRadius: '4px 4px 0 0'
-            }}
-          >
-            Health Check
-          </button>
-          <button
             onClick={() => setActiveTab('devops')}
             style={{
               padding: '10px 20px',
@@ -408,6 +394,21 @@ function Manage() {
           >
             Infrastructure
           </button>
+             <button
+            onClick={() => setActiveTab('health-check')}
+            style={{
+              padding: '10px 20px',
+              border: 'none',
+              backgroundColor: activeTab === 'health-check' ? '#10b981' : 'transparent',
+              color: activeTab === 'health-check' ? '#ffffff' : '#9ca3af',
+              cursor: 'pointer',
+              marginRight: '10px',
+              borderRadius: '4px 4px 0 0'
+            }}
+          >
+            Health Check
+          </button>
+       
         </div>
         
         <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#1f2937', borderRadius: '4px', border: '1px solid #374151' }}>

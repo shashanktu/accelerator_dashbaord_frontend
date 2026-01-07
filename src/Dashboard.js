@@ -106,7 +106,7 @@ function Dashboard() {
           <h3 style={{ color: '#10b981', marginBottom: '10px' }}>{item.title}</h3>
           <p style={{ color: '#d1d5db', fontSize: '14px', marginBottom: '15px', lineHeight: '1.4' }}>{item.description}</p>
           <div>
-            <a href={item.link1} style={linkStyle}>View</a>
+            <a href={item.link1} target="_blank" rel="noopener noreferrer" style={linkStyle}>View</a>
             <a href={item.link2} style={linkStyle}>Dashboard</a>
           </div>
         </div>

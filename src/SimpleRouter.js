@@ -23,7 +23,7 @@ function SimpleRouter() {
     return <Dashboard />;
   }
 
-  if (currentPath === '/manage') {
+  if (currentPath.startsWith('/manage')) {
     return <Manage />;
   }
 

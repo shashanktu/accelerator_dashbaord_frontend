@@ -55,7 +55,7 @@ function Dashboard() {
 
   const botsData = getApplicationsByType('bot');
   const acceleratorsData = getApplicationsByType('accelerator');
-  const tscSolutionsData = getApplicationsByType('tsc-solution');
+  const tscSolutionsData = getApplicationsByType('tsc-solutions');
 
   const cardStyle = {
     border: '1px solid #374151',
